@@ -1,0 +1,538 @@
+
+mainChar.data.spentMana: 0
+mainChar.data.maxMana: 420
+divine caldera's cooldowns before cast: [ 1: 0, 2: 0 ]
+divine caldera has been cast.
+{F3} has been pressed.
+divine caldera's cooldowns after cast: [ 1: 2300, 2: 2300 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 0, 2: 0 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 2110, 2: 2110 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 2110, 2: 2110 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1920, 2: 1920 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1920, 2: 1920 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1730, 2: 1730 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1730, 2: 1730 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1540, 2: 1540 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1540, 2: 1540 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1350, 2: 1350 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1350, 2: 1350 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1160, 2: 1160 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1160, 2: 1160 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 970, 2: 970 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 970, 2: 970 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 580
+mainChar.data.spentMana: 0
+mainChar.data.maxMana: 420
+divine caldera's cooldowns before cast: [ 1: 780, 2: 780 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 780, 2: 780 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 590, 2: 590 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 590, 2: 590 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 400, 2: 400 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 400, 2: 400 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 210, 2: 210 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 210, 2: 210 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 20, 2: 20 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 20, 2: 20 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: -170, 2: -170 ]
+divine caldera has been cast.
+{F3} has been pressed.
+divine caldera's cooldowns after cast: [ 1: 2300, 2: 2300 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 2110, 2: 2110 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 2110, 2: 2110 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1920, 2: 1920 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1920, 2: 1920 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1730, 2: 1730 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1730, 2: 1730 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1540, 2: 1540 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1540, 2: 1540 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1350, 2: 1350 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1350, 2: 1350 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1160, 2: 1160 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1160, 2: 1160 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 970, 2: 970 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 970, 2: 970 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 780, 2: 780 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 780, 2: 780 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 580
+mainChar.data.spentMana: 0
+mainChar.data.maxMana: 420
+divine caldera's cooldowns before cast: [ 1: 590, 2: 590 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 590, 2: 590 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 400, 2: 400 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 400, 2: 400 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 210, 2: 210 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 210, 2: 210 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 20, 2: 20 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 20, 2: 20 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: -170, 2: -170 ]
+divine caldera has been cast.
+{F3} has been pressed.
+divine caldera's cooldowns after cast: [ 1: 2300, 2: 2300 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 2110, 2: 2110 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 2110, 2: 2110 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 1920, 2: 1920 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1920, 2: 1920 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1730, 2: 1730 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1730, 2: 1730 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1540, 2: 1540 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1540, 2: 1540 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1350, 2: 1350 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1350, 2: 1350 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1160, 2: 1160 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1160, 2: 1160 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 970, 2: 970 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 970, 2: 970 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 780, 2: 780 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 780, 2: 780 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 590, 2: 590 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 590, 2: 590 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 580
+mainChar.data.spentMana: 0
+mainChar.data.maxMana: 420
+divine caldera's cooldowns before cast: [ 1: 400, 2: 400 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 400, 2: 400 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 210, 2: 210 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 210, 2: 210 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 20, 2: 20 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 20, 2: 20 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: -170, 2: -170 ]
+divine caldera has been cast.
+{F3} has been pressed.
+divine caldera's cooldowns after cast: [ 1: 2300, 2: 2300 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 2110, 2: 2110 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 2110, 2: 2110 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 1920, 2: 1920 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1920, 2: 1920 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 1730, 2: 1730 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1730, 2: 1730 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1540, 2: 1540 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1540, 2: 1540 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1350, 2: 1350 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1350, 2: 1350 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1160, 2: 1160 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1160, 2: 1160 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 970, 2: 970 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 970, 2: 970 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 780, 2: 780 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 780, 2: 780 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 590, 2: 590 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 590, 2: 590 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 400, 2: 400 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 400, 2: 400 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 580
+mainChar.data.spentMana: 0
+mainChar.data.maxMana: 420
+divine caldera's cooldowns before cast: [ 1: 210, 2: 210 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 210, 2: 210 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: 20, 2: 20 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 20, 2: 20 ]
+mainChar.data.spentMana: 0
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 0
+divine caldera's cooldowns before cast: [ 1: -170, 2: -170 ]
+divine caldera has been cast.
+{F3} has been pressed.
+divine caldera's cooldowns after cast: [ 1: 2300, 2: 2300 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 2110, 2: 2110 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 2110, 2: 2110 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 1920, 2: 1920 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1920, 2: 1920 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 1730, 2: 1730 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1730, 2: 1730 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 160
+divine caldera's cooldowns before cast: [ 1: 1540, 2: 1540 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1540, 2: 1540 ]
+mainChar.data.spentMana: 160
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1350, 2: 1350 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1350, 2: 1350 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 1110, 2: 1110 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 1110, 2: 1110 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 1160, 2: 1160 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 1160, 2: 1160 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 920, 2: 920 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 920, 2: 920 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 970, 2: 970 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 970, 2: 970 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 730, 2: 730 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 730, 2: 730 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 780, 2: 780 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 780, 2: 780 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 540, 2: 540 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 540, 2: 540 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 590, 2: 590 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 590, 2: 590 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 350, 2: 350 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 350, 2: 350 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 400, 2: 400 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 400, 2: 400 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: 160, 2: 160 ]
+salvation has not been cast due to remaining cooldown(s).
+salvation's cooldowns after cast: [ 1: 160, 2: 160 ]
+mainChar.data.spentMana: 370
+divine caldera's cooldowns before cast: [ 1: 210, 2: 210 ]
+divine caldera has not been cast due to remaining cooldown(s).
+divine caldera's cooldowns after cast: [ 1: 210, 2: 210 ]
+mainChar.data.spentMana: 370
+salvation's cooldowns before cast: [ 1: -30, 2: -30 ]
+salvation has been cast.
+{F1} has been pressed.
+salvation's cooldowns after cast: [ 1: 1300, 2: 1300 ]
+mainChar.data.spentMana: 580
