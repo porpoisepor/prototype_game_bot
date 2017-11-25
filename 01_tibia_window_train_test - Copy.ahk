@@ -7,7 +7,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;^ CONTROL
 
 ;TODO =================================================================================
-    ; CURRENT: testRotation() implementation
+    ; CURRENT: add save / load from file
+    ; CURRENT: polish configState
     ; [x]TODO
     ;   [x]add currentCooldown property for each spell and each group
     ; [x]TODO
@@ -40,12 +41,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ;   [ ]stuff all global config inside a global configState object
     ; [ ]TODO
     ; [ ]add GUI radio buttons, checkmarks and buttons for better control
-    ;   [ ]add button for printInsteafOfSendHotkey
-    ;   [ ]add button for changing stop flag
-    ;   [ ]radio buttons for vocation
-    ;   [ ]textedit for level
-    ;   [ ]checkmark for food
-    ;   [ ]button for refresh
+    ;   [x]add button for printInsteafOfSendHotkey
+    ;   [x]add button for changing stop flag
+    ;   [x]radio buttons for vocation
+    ;   [x]textedit for level
+    ;   [x]checkmark for food
+    ;      [x]meh
+    ;   [x]button for refresh
+    ;      [x]nope
+    ;   [ ]add other controls
     ; TODO
     ;   move window position so it hides window when using 
     ;   add flag to control if window shall be hidden or not
@@ -61,6 +65,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ;   implement disconnect detection based on window title (changes from "Tibia - <character_name>" to "Tibia")
     ; TODO
     ;   test sleep monitor with nircmd cmd program
+    ; TODO
+    ;   allow changing hotkeys on GUI
     ; [x]TODO
     ;   [x]add paladin spells and rotation
     ;   [x]add knight spells and rotation
@@ -106,7 +112,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     global printInsteadOfSendHotkey := true
     global stop := false
     global considerLatency := false
-    global verboseDebug := true
+    global muteDebug := false
     
     ;vocation spells
     global sorcererSpells := {"invisibility": invisibilitySpell, "hells core": hellsCoreSpell, "rage of the skies": rageOfTheSkiesSpell}
@@ -117,10 +123,34 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;======================================================================================
 ;GUI LABELS ===========================================================================
 
-    DisplayText1 :=
-    DebugWindow :=
+    global DisplayText1 :=
+    global DebugWindow :=
     ;debugWindow := "DebugWindow"
+    global VocationRadioGroup :=
+    VocationRadio1 :=
+    VocationRadio2 :=
+    VocationRadio3 :=
+    global LevelEdit :=
+    ;global RefreshDataButton :=
+    global LatencyEdit :=
 
+    ;stats
+    global MaxMana :=
+    global ManaRegen :=
+    global AutoattackManaPerSec :=
+    global RotationConsumptionPerSec :=
+    global RotationConsumptionPerSecWithLatency :=
+    global SpentMana :=
+    global TimeForFullMana :=
+    global TimeForFullManaConsumption :=
+    global WaitTimeBeforeStartingRotation :=
+    global WaitTimeBeforeStartingRotationWithLatency :=
+
+    ;program config
+    global PrintInsteadOfPress :=
+    global StartRotation :=
+    global StopRotation :=
+    global MuteDebugButton :=
 
 ;======================================================================================
 ;CONFIG ===============================================================================
@@ -177,6 +207,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
             this.manaConsumptionPerSec := this.mana * 1000 / this.cooldown
             this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + latency)
             this.hotkey := hotkey
+        }
+        recalculateLatency(){
+            this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + latency)
         }
         activateCooldowns(){
             this.currentCooldown := this.cooldown + latency
@@ -380,7 +413,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         GuiControl, Text, debugWindow, % msg
     }
     debugPrint(msg){
-        if(verboseDebug){
+        if(!muteDebug){
             finalMsg := ""
             GuiControlGet, finalMsg, , DebugWindow
             finalMsg .= "`n" msg
@@ -470,6 +503,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         }
         ;Menu, Tray, Icon, % icons.running
     }
+    recalculateAllSpellLatencies(){
+        for vocationSpellCategoryIndex, vocationSpellCategory in allSpells{
+            for spellName, spell in vocationSpellCategory{
+                spell.recalculateLatency()
+            }
+        }
+        mainChar.update()
+        ;for each spell
+        ;    spell.recalculateLatency()
+        ;global sorcererSpells := {"invisibility": invisibilitySpell, "hells core": hellsCoreSpell, "rage of the skies": rageOfTheSkiesSpell}
+        ;global knightSpells := {"fierce berserk": fierceBerserkSpell, "charge": chargeSpell}
+        ;global paladinSpells := {"salvation": salvationSpell, "divine caldera": divineCalderaSpell}
+        ;global allSpells := [sorcererSpells, knightSpells, paladinSpells]
+    }
 
 
 ;======================================================================================
@@ -518,8 +565,120 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         Gui, Add, Edit, ReadOnly vDisplayText1 +r10 +w590 +wrap +vScroll +ys, aaa
         GuiControl, Text, DisplayText1, % mainChar.toString()
         Gui, Add, Edit, ReadOnly vDebugWindow +r10 +w800 +wrap +section +xs
-        ;GuiControl, Text, DebugWindow, zzz
+        Gui, Add, Text, +r1 +wrap +section, Vocation
+        Gui, Add, Radio, vVocationRadioGroup +Checked gVocationRadioGroupCallback, Sorcerer
+        Gui, Add, Radio, gVocationRadioGroupCallback, Knight
+        Gui, Add, Radio, gVocationRadioGroupCallback, Paladin
+        Gui, Add, Text, +r1 +wrap +ys, Level
+        Gui, Add, Edit, vLevelEdit gLevelEditCallback, 100
+        ;Gui, Add, Button, vRefreshDataButton +wrap , Refresh
+        Gui, Add, Text, +r1 +wrap +ys, Latency(ms)
+        Gui, Add, Edit, vLatencyEdit gLatencyEditCallback, 300
+        ;stats
+        Gui, Add, Text, +r1 +wrap +ys, maxMana
+        Gui, Add, Text, +r1 +wrap , manaRegen
+        Gui, Add, Text, +r1 +wrap , autoattackManaPerSec
+        Gui, Add, Text, +r1 +wrap , rotationConsumptionPerSec
+        Gui, Add, Text, +r1 +wrap , rotationConsumptionPerSecWithLatency
+        Gui, Add, Text, +r1 +wrap , spentMana
+        Gui, Add, Text, +r1 +wrap , timeForFullMana
+        Gui, Add, Text, +r1 +wrap , timeForFullManaConsumption
+        Gui, Add, Text, +r1 +wrap , waitTimeBeforeStartingRotation
+        Gui, Add, Text, +r1 +wrap , waitTimeBeforeStartingRotationWithLatency
+        ;stats
+        Gui, Add, Text, +r1 +wrap +w60 +ys vMaxMana, % mainChar.data.maxMana
+        Gui, Add, Text, +r1 +wrap +w60 vManaRegen, % mainChar.data.manaRegen
+        Gui, Add, Text, +r1 +wrap +w60 vAutoattackManaPerSec, % mainChar.data.autoattackManaPerSec
+        Gui, Add, Text, +r1 +wrap +w60 vRotationConsumptionPerSec, % mainChar.data.rotationConsumptionPerSec
+        Gui, Add, Text, +r1 +wrap +w60 vRotationConsumptionPerSecWithLatency, % mainChar.data.rotationConsumptionPerSecWithLatency
+        Gui, Add, Text, +r1 +wrap +w60 vSpentMana, % mainChar.data.spentMana
+        Gui, Add, Text, +r1 +wrap +w60 vTimeForFullMana, % mainChar.data.timeForFullMana
+        Gui, Add, Text, +r1 +wrap +w60 vTimeForFullManaConsumption, % mainChar.data.timeForFullManaConsumption
+        Gui, Add, Text, +r1 +wrap +w60 vWaitTimeBeforeStartingRotation, % mainChar.data.waitTimeBeforeStartingRotation
+        Gui, Add, Text, +r1 +wrap +w60 vWaitTimeBeforeStartingRotationWithLatency, % mainChar.data.waitTimeBeforeStartingRotationWithLatency
+
+        ;meta
+        Gui, Add, Checkbox, +wrap vPrintInsteadOfPress gPrintInsteadOfPressCallback +ys, Send to debug window instead of game
+        Gui, Add, Button, +r1 +wrap vStartRotation gStartRotationCallback, Start Rotation
+        Gui, Add, Checkbox, +r1 +wrap vStopRotation gStopRotationCallback, Stop Rotation
+        Gui, Add, Checkbox, +r1 +wrap vMuteDebugButton gMuteDebugButtonCallback, Mute Debug
+
         Gui, Show
+        refreshGUI()
+        ;maxMana: 420
+        ;manaRegen: 16
+        ;autoattackManaPerSec: 0
+        ;rotationConsumptionPerSec: 290.000000
+        ;rotationConsumptionPerSecWithLatency: 231.103679
+        ;spentMana: 0
+        ;timeForFullMana: 26.250000
+        ;timeForFullManaConsumption: 1.448276
+        ;timeForFullManaConsumptionWithLatency: 1.817366
+        ;waitTimeBeforeStartingRotation: 24.801724
+        ;waitTimeBeforeStartingRotationWithLatency: 24.432634
+    }
+    vocationRadioGroupCallback(){
+        Gui, Submit, NoHide
+        debugPrint("VocationRadioGroupCallback called, result: " VocationRadioGroup)
+        refreshGUI()
+    }
+    levelEditCallback(){
+        Gui, Submit, NoHide
+        debugPrint("LevelEditCallback called, result:" LevelEdit)
+        refreshGUI()
+    }
+    LatencyEditCallback(){
+        Gui, Submit, NoHide
+        debugPrint("LatencyEditCallback called, result: " LatencyEdit)
+        refreshGUI()
+        recalculateAllSpellLatencies()
+        refreshGUI()
+    }
+    PrintInsteadOfPressCallback(){
+        Gui, Submit, NoHide
+        printInsteadOfSendHotkey := PrintInsteadOfPress
+        debugPrint("PrintInsteadOfPressCallback called, result: " PrintInsteadOfPress)
+    }
+    StartRotationCallback(){
+        Gui, Submit, NoHide
+        debugPrint("StartRotationCallback called, starting continuous rotation.")
+        doContinuousRotation()
+    }
+    StopRotationCallback(){
+        Gui, Submit, NoHide
+        debugPrint("StopRotationCallback called, result: " StopRotation)
+        stop := StopRotation
+    }
+    MuteDebugButtonCallback(){
+        Gui, Submit, NoHide
+        debugPrint("MuteDebugButtonCallback called, result: " MuteDebugButton)
+        muteDebug := MuteDebugButton
+    }
+    refreshGUI(){
+        guiData := getGUIData()
+        latency := guiData.latency
+        mainChar.init(guiData.level, guiData.vocation, 0)
+        GuiControl, Text, MaxMana, % mainChar.data.maxMana
+        GuiControl, Text, ManaRegen, % mainChar.data.manaRegen
+        GuiControl, Text, AutoattackManaPerSec, % mainChar.data.autoattackManaPerSec
+        GuiControl, Text, RotationConsumptionPerSec, % mainChar.data.rotationConsumptionPerSec
+        GuiControl, Text, RotationConsumptionPerSecWithLatency, % mainChar.data.rotationConsumptionPerSecWithLatency
+        GuiControl, Text, SpentMana, % mainChar.data.spentMana
+        GuiControl, Text, TimeForFullMana, % mainChar.data.timeForFullMana
+        GuiControl, Text, TimeForFullManaConsumption, % mainChar.data.timeForFullManaConsumption
+        GuiControl, Text, WaitTimeBeforeStartingRotation, % mainChar.data.waitTimeBeforeStartingRotation
+        GuiControl, Text, WaitTimeBeforeStartingRotationWithLatency, % mainChar.data.waitTimeBeforeStartingRotationWithLatency
+    }
+    getGUIData(){
+        Gui, Submit, NoHide
+        vocation := vocations[VocationRadioGroup - 1]
+        level := LevelEdit
+        latency := LatencyEdit
+        ;VocationRadioGroup
+        ;LevelEdit
+        ;LatencyEdit
+        debugPrint("vocation, level, latency: " vocation ", " level ", " latency)
+        return { "vocation": vocation, "level": level, "latency": latency}
     }
 
     ^+!e::
@@ -630,9 +789,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         doContinuousRotation()
     }
 
-
 ;===============================================================================
-
 ;SYNTAX TESTS ==================================================================
 
     class someSpell{
