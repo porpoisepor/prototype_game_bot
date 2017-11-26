@@ -1,0 +1,895 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"argum",
+				"invalid_argument"
+			],
+			[
+				"case",
+				"case\tBOOST TEST auto test case"
+			],
+			[
+				"deltaTemperat",
+				"deltaTemperatureCached"
+			],
+			[
+				"inputtemp",
+				"inputTemperature"
+			],
+			[
+				"output",
+				"outputTemperature"
+			],
+			[
+				"heatca",
+				"heatCapacityFlowrate"
+			],
+			[
+				"heat",
+				"heatCapacityFlowrate"
+			],
+			[
+				"delta",
+				"deltaTemperature"
+			],
+			[
+				"specific",
+				"specificHeat"
+			],
+			[
+				"H",
+				"HeatCapacityFlowrate"
+			],
+			[
+				"mass",
+				"massflowrate"
+			],
+			[
+				"throw",
+				"BOOST_CHECK_THROW"
+			],
+			[
+				"floating",
+				"floating_case\tBOOST TEST floating tolerance test case"
+			],
+			[
+				"deltaTempe",
+				"deltaTemperature_1"
+			],
+			[
+				"tempera",
+				"temperature_2"
+			],
+			[
+				"tempe",
+				"temperature_1"
+			],
+			[
+				"bat",
+				"BOOST_AUTO_TEST_CASE"
+			],
+			[
+				"test",
+				"unit_test"
+			],
+			[
+				"suite",
+				"suite\tBOOST TEST suite"
+			],
+			[
+				"get",
+				"get_by_value\t||const getter by value"
+			],
+			[
+				"boosttest",
+				"boost_test\tBOOST TEST default macro"
+			],
+			[
+				"for",
+				"for\trange for"
+			],
+			[
+				"time",
+				"time_since_epoch"
+			],
+			[
+				"steady",
+				"steadyString"
+			],
+			[
+				"tran",
+				"transformedColorPixel"
+			],
+			[
+				"dot",
+				"dotProductNormalLight"
+			],
+			[
+				"sphere",
+				"sphereSurfaceNormal"
+			],
+			[
+				"inci",
+				"incidencePointToLight"
+			],
+			[
+				"incidence",
+				"incidencePointToLight"
+			],
+			[
+				"convertT",
+				"convertToUchar"
+			],
+			[
+				"conver",
+				"convertToUchar"
+			],
+			[
+				"outpu",
+				"output\tc++_output_operator_single_value"
+			],
+			[
+				"equat",
+				"equationString"
+			],
+			[
+				"light",
+				"lightTransform_1"
+			],
+			[
+				"reflec",
+				"reflectionMultiplier"
+			],
+			[
+				"refle",
+				"reflectionMultiplier"
+			],
+			[
+				"reflection",
+				"reflectionMultiplier"
+			],
+			[
+				"base",
+				"baseColor"
+			],
+			[
+				"reflect",
+				"reflectionFunction"
+			],
+			[
+				"centerto",
+				"centerToIncidentVector"
+			],
+			[
+				"inciden",
+				"incidentVector"
+			],
+			[
+				"distance",
+				"distanceFromCenterToIncident"
+			],
+			[
+				"center",
+				"centerToIncidentVector"
+			],
+			[
+				"centerTo",
+				"centerToIncidentVector"
+			],
+			[
+				"incid",
+				"incidentVector"
+			],
+			[
+				"camera",
+				"cameraToCenter"
+			],
+			[
+				"centero",
+				"centerToIncident"
+			],
+			[
+				"error",
+				"errorPercent"
+			],
+			[
+				"distan",
+				"distanceFromCenter"
+			],
+			[
+				"cameraTo",
+				"cameraToScreenPixel"
+			],
+			[
+				"cos",
+				"cosAngleAB"
+			],
+			[
+				"tp",
+				"test_projections"
+			],
+			[
+				"pixelPosi",
+				"pixelPositions"
+			],
+			[
+				"pixel",
+				"pixelArrayCopy"
+			],
+			[
+				"norm",
+				"normCached_"
+			],
+			[
+				"elemen",
+				"elementSeparator"
+			],
+			[
+				"outp",
+				"output\tc++_output_operator_single_value"
+			],
+			[
+				"screen",
+				"screen_1"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"out",
+				"output\tc++_output_operator_single_value"
+			],
+			[
+				"pixal",
+				"pixelArrayCopy"
+			],
+			[
+				"Pixel",
+				"RgbPixel"
+			],
+			[
+				"he",
+				"height_"
+			],
+			[
+				"string",
+				"stringstream"
+			],
+			[
+				"heigh",
+				"height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"cpp_",
+				"cpp_standard_flag"
+			],
+			[
+				"display",
+				"display_variables"
+			],
+			[
+				"cel",
+				"celsiusTemperature"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 138.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: package",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"instant",
+				"Scope Hunter: Toggle Instant Scoper"
+			],
+			[
+				"scope",
+				"Scope Hunter: Show Scope Under Cursor(s)"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package instal\t",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"clang",
+				"Clang Format: Select Style"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"file:re",
+				"File: Rename"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(true)",
+			"sublime.log_input(False)",
+			"sublime.log_commands(False)",
+			"sublime.log_input(True)",
+			"sublime.log_commands(True)",
+			"asdasd",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder"
+	],
+	"file_history":
+	[
+		"/C/Users/win_second_lobster/Desktop/AHK macros/bs_4.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_callbacks.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/unit_tests.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/hotkeys.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/01_tibia_window_train_test - Copy.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/00_tibia_window_train_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/globals.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/helpers.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/spell_class.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/character_class.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config_class.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/TODO.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_labels.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/init.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/sample_debug_log_2.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/sample_debug_log.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/01_tibia_window_train_test - Copy.ahk",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_template.sublime-snippet",
+		"/C/Users/win_second_lobster/AppData/Roaming/Tibia/Server Log.txt",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_separator.sublime-snippet",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_function.sublime-snippet",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/gui_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/desktop temp/README.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/keydelay_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/function_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_window_train_test.ahk",
+		"/E/programas/Tibialyzer v1.3.0/Database/MemoryAddresses.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/change_tray_color_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/traytip_test.ahk",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.317/DesktopToastsSample.h",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.380/DesktopToastsSample.cpp",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/variables_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/sleep_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/maximize_test.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/bs_4 - Copy.ahk",
+		"/E/projetos/AndroidStudioProjects/Basquete/app/src/main/res/layout/activity_main.xml",
+		"/E/projetos/AndroidStudioProjects/Basquete/app/src/main/AndroidManifest.xml",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E09.720p.WEBRip.x264-STRiFE[rarbg]/Mindhunter - 01x09 - Episode 9.WEBrip.STRiFE.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E10.720p.WEBRip.x264-STRiFE[rarbg]/Mindhunter - 01x10 - Episode 10.WEBrip.STRiFE.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E06.720p.WEBRip.x264-STRiFE[rarbg]/Mindhunter - 01x06 - Episode 6.WEBrip.STRiFE.English.HI.C.updated.Addic7ed.com (1).srt",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E05.720p.WEBRip.x264-STRiFE[rarbg]/Mindhunter - 01x05 - Episode 5.WEBrip.STRiFE.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E04.720p.WEBRip.x264-STRiFE[rarbg]/Mindhunter - 01x04 - Episode 4.WEBrip.STRiFE.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E03.WEBRip.x264-RARBG/Mindhunter - 01x03 - Episode 3.WEB-DL.x264-RARBG.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/Documents/C++/opentibia_source/server-master/CMakeLists.txt",
+		"/E/Documents/C++/opentibia_source/server-master/README.DATABASE",
+		"/E/Documents/C++/opentibia_source/server-master/src/compiler/workarounds.h",
+		"/E/Documents/C++/opentibia_source/server-master/src/compiler/gcc.h",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E01.WEBRip.x264-RARBG/Mindhunter - 01x01 - Episode 1.WEB-DL.x264-RARBG+STRiFE.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/Documents/new_series/mindhunter/Mindhunter.S01E02.720p.REPACK.WEBRip.x264-STRiFE[rarbg]/Mindhunter - 01x02 - Episode 2.REPACK.WEBrip.STRiFE.English.HI.C.updated.Addic7ed.com.srt",
+		"/E/projetos/git_test/test/README.md",
+		"/E/projetos/git_test/test/readme.me",
+		"/C/Users/win_second_lobster/Desktop/temp/README.txt",
+		"/C/Users/win_second_lobster/Desktop/MouseWithoutBorders/ScreenCaptures/RustServer.bat.txt",
+		"/E/Documents/0_img/rust_coords/rust_coords_70111.txt",
+		"/E/Documents/0_img/rust_2_november_seeds.txt",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/Makefile.sublime-settings",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/C++.sublime-settings",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.615/sublime3_keys.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.244/ReadMe.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.776/Read Me.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.272/ReadMe.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.112/Read Me.txt",
+		"/E/0_torrents/setup/Sublime Text 3 Dev Build 3133 Final + Patch/Read Me.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/tudo_athens/email/quit_b.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/fish_desc.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/culinaria_desc.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/fruit_desc.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/people_desc.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/40_descricoes.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/people.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/fruit.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/culinaria.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/fish.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/40_descricoes_backup.txt",
+		"/E/projetos/resources/android_accelerate/dicionario_tupi/40_palavras.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.352/The.Walking.Dead.S08E02.720p.HDTV.x264-FLEET.srt",
+		"/E/Documents/0_img/ch/coisas_para_fazer_post_25_10_2017.txt",
+		"/E/Documents/0_img/ch/help.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/poster/rascunho.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/poster/resumo_JIC_2017_Felipe_Oliveira_DFAR_v6.0.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/poster/tabela.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/comentario_resubmissao.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/comentarios.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/resumo_dfar_jic.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/resumo_dfar_jic_final_quase.txt",
+		"/E/Documents/0_estagio_dfar_e_projeto_final_athens/jic_(dfar_new)/email_flavio.txt",
+		"/E/Documents/0_img/ch/tooth.txt",
+		"/E/Documents/0_img/ch/office64_32.txt",
+		"/E/Documents/0_img/ch/office_s.txt",
+		"/E/Documents/new_series/the_walking_dead/The.Walking.Dead.S08E01.720p.HDTV.x264-AVS[rarbg]/The.Walking.Dead.S08E01.HDTV.x264-SVA.srt",
+		"/E/Documents/0_img/ch/bots.txt",
+		"/E/Documents/0_img/ch/jejum.txt",
+		"/E/Documents/0_img/ch/coconut_oil.txt",
+		"/E/Documents/0_img/ch/unknown_link.txt",
+		"/E/Documents/0_img/ch/router_tibia.txt",
+		"/E/Documents/0_img/ch/nested.txt",
+		"/E/Documents/0_img/ch/acucar.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.227/LEIA-ME [by ment0r].txt",
+		"/E/Documents/0_img/ch/titulos.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.404/leia-me[ment0r].txt",
+		"/E/Documents/C++/C/hello_test/Makefile",
+		"/E/Documents/C++/C/hello_test/hello.c",
+		"/E/Documents/0_img/ch/caminho2.txt",
+		"/E/Documents/0_img/ch/callphone_cancer.txt",
+		"/E/Documents/0_img/ch/performance_post_2.txt",
+		"/E/Documents/0_img/ch/performance_post.txt",
+		"/E/Documents/C++/collatz/collatz.cpp",
+		"/E/Documents/0_img/ch/fios_big_bang.txt",
+		"/E/Documents/C++/collatz/longinttest.cpp",
+		"/E/Documents/C++/collatz/Makefile",
+		"/E/Documents/C++/collatz/final.cpp",
+		"/E/Documents/C++/collatz/Makefile2",
+		"/E/Documents/0_img/ch/obs.txt",
+		"/E/Documents/0_img/ch/obs",
+		"/E/Documents/0_img/ch/game_industry.txt",
+		"/E/Documents/new_series/rick_and_morty/Rick.and.Morty.S03E10.The.Rickchurian.Mortydate.1080p.AMZN.WEBRip.DDP5.1.x264-QOQ[rarbg]/Rick and Morty - 03x10 - The Rickchurian Mortydate.Amazon-WEB-DL,QOQ+Uncensored.WEB-DL.English.HI.C.orig.Addic7ed.co.srt",
+		"/E/Documents/0_img/ch/origin_3.txt",
+		"/E/Documents/0_img/ch/origin_2.txt",
+		"/E/Documents/0_img/ch/origin.txt",
+		"/E/Documents/0_img/ch/electromagnetic_storm.txt",
+		"/C/Users/win_second_lobster/AppData/Roaming/SumatraPDF/SumatraPDF-settings.txt",
+		"/E/Documents/0_img/ch/tags_test.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.219/changelog.txt",
+		"/E/Documents/book_windows/graphical_programming/superbible_downloads/sb7code-master/src/movingtri/movingtri.cpp",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.150/Read Me.txt",
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.527/Read Me.txt"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"printspell",
+			"instead",
+			"printInstead",
+			"cast\\(",
+			"debugprint",
+			"debugprint\\( ",
+			"debugprint",
+			"recalcu",
+			"GuiSubmit",
+			"vRadioGroupVocation",
+			"radio",
+			"debugprint",
+			"waittime",
+			"timefor",
+			"stop",
+			"consider",
+			"time_interval",
+			"notify",
+			"spentmana",
+			"cast\\(sp",
+			"testcharactermul",
+			"spell",
+			"updateRe",
+			"reset",
+			"updateR",
+			"spent",
+			"spend",
+			"spendMana",
+			"config",
+			"test",
+			"latency",
+			"acti",
+			"allsp",
+			"Cooldown",
+			"manaConsumptionPerSec",
+			"server",
+			"latency",
+			"somespell",
+			"displaytext1",
+			"vdisplaytext1",
+			"decreasecoold",
+			"sorcererSpells",
+			"\"",
+			"vocations",
+			"\",",
+			"vocations\\.",
+			"spells",
+			"\"cooldown\"",
+			"rotation",
+			"printDebug",
+			"getcooldown",
+			"mainchar\\.spell",
+			"mainchar.spell",
+			"invisibilitySpell",
+			"spell.",
+			"spell\\.",
+			"spell.",
+			"activatec",
+			"your att",
+			"DisplayText2",
+			"decreaseCooldowns",
+			"guicontrol, te",
+			"Remaining",
+			"msg",
+			"icon",
+			"guicontrol, te",
+			" ,%",
+			"current_ic",
+			"stop",
+			"false",
+			"words",
+			"Value",
+			"value",
+			"key",
+			"currentC",
+			"elder druid",
+			"master sorcerer",
+			"Elite Knight",
+			"Royal Paladin",
+			"focus",
+			"vdispla",
+			"true",
+			"oficina",
+			".biz",
+			"no-ip",
+			"intel",
+			"intelbra",
+			"tray",
+			"mainch",
+			" .",
+			"Mana",
+			"mana",
+			":",
+			"0",
+			"150",
+			" .",
+			"Enter",
+			"assist",
+			"LoremId",
+			"new",
+			"lorem_id",
+			"blasb",
+			"`n",
+			"MenuHandlerB",
+			"heal",
+			"( .*)",
+			"stop",
+			"\"\n",
+			"\".`",
+			"return",
+			"ahk",
+			"hotkey",
+			"bot",
+			", ",
+			" ",
+			"asd",
+			"gem",
+			"wall",
+			"come",
+			"setx",
+			"comp",
+			"XXXXX\n00000\n",
+			"\\n{2,}",
+			"\\n+",
+			"\\n",
+			"e:",
+			"java",
+			"jdk"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"invisibilitySpell",
+			"Remain",
+			"",
+			"\\t",
+			"\\n\\n",
+			"\\n",
+			"",
+			"<item>\"$1\"</item>",
+			"<item>$1</item>",
+			"<item>($1)",
+			"<item>(1)",
+			"",
+			"\\t",
+			"* ",
+			"*",
+			"",
+			"_",
+			"",
+			"_",
+			" ",
+			"_",
+			"",
+			",",
+			"",
+			"0.1",
+			"weight",
+			"",
+			"_",
+			"",
+			".",
+			"_",
+			"size_t",
+			" ",
+			"",
+			"https://www.youtube.com/watch",
+			"",
+			"_",
+			"-",
+			"_",
+			"",
+			"_",
+			"",
+			"-Pad",
+			"[*]",
+			"\\n–",
+			"_",
+			"Cold",
+			"COLD",
+			"hdmi",
+			"",
+			"hdmi",
+			"_",
+			" ",
+			"_",
+			" ",
+			"/",
+			"\\n",
+			".",
+			"uchar",
+			"",
+			" \\(char*\\)\"",
+			"\\(char*\\)\"",
+			" \\(char*\\)\"",
+			"0.5",
+			"1.9",
+			"1.9999",
+			"1.5",
+			"1",
+			"_",
+			"\nPoint operator*(const Point& leftPoint, float scalar){\n    return Point{leftPoint.x * scalar, leftPoint.y * scalar, leftPoint.z * scalar};\n}",
+			"rightVector",
+			"right",
+			"left",
+			"$1Vector.$2()",
+			"$1Vector.$2",
+			"$1asd",
+			"std::int64_t",
+			"\\1blab",
+			"\\1",
+			"$1a",
+			"std::int64_t",
+			"0",
+			"255",
+			"_",
+			"  \n",
+			"_",
+			"//",
+			"_",
+			" ",
+			"_",
+			"",
+			"_",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\t",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"\\t",
+			"",
+			"set current",
+			"\\t",
+			"b",
+			"",
+			"_",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.scopehunter.results":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "game_bot_sublime_project.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

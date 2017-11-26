@@ -1,0 +1,72 @@
+;TODO =================================================================================
+    ; CURRENT: add save / load from file
+    ; CURRENT: polish configState
+    ; [x]TODO
+    ;   [x]add currentCooldown property for each spell and each group
+    ; [x]TODO
+    ;   [x]create spell classes to allow data member modification
+    ; [x]TODO
+    ;   [x]create cooldown loop
+    ;     [x]test display on textbox
+    ;        [x]spell.cast() has effect of printing to screen
+    ;        [x]spell.cast() has effect of using keystroke to cast spell
+    ;     [x]starts everything with 0 cooldown
+    ;     [x]every X ms uses hotkey for every spell with 0 cooldown && 0 cooldown in group
+    ;         [x]add full cooldown if it can be applied
+    ;         [x]for every cooldown decrease cooldown by X ms ;if cooldown >= 0
+    ; [x]TODO
+    ;   [x]create window activation cycle
+    ;       [x]check stop flag every iteration
+    ;       [x]add hotkeys for each spell
+    ;           [x]also add it to the cast() of each spell
+    ;       [x]find out where latency should go
+    ;          [x]find if it should be currentCooldown <= (0 - latency) in the mid of the rotation cycle
+    ;               [x]NO, actually it should be currentCooldown := cooldown + latency in the cooldown activation()
+    ;       [x]check in loop if spells should be cast every N milliseconds, N is the chosen updateRate (preferably < 200ms per udpate, > 5 per second)
+    ;       [x]keep track of mana spent
+    ;           [x]if spent mana >= maxMana, break out of loop and start wait(waitTime)
+    ;
+    ; TODO ;IMPORTANT
+    ;   find out at which point globals not being in the beginning of the file matter
+    ;       [x]they do matter sometimes
+    ; TODO
+    ;   [ ]stuff all global config inside a global configState object
+    ; [ ]TODO
+    ; [ ]add GUI radio buttons, checkmarks and buttons for better control
+    ;   [x]add button for printInsteafOfSendHotkey
+    ;   [x]add button for changing stop flag
+    ;   [x]radio buttons for vocation
+    ;   [x]textedit for level
+    ;   [x]checkmark for food
+    ;      [x]meh
+    ;   [x]button for refresh
+    ;      [x]nope
+    ;   [ ]add other controls
+    ; TODO
+    ;   move window position so it hides window when using 
+    ;   add flag to control if window shall be hidden or not
+    ; TODO
+    ;   open tibialyzer and make it hide all health/mana bars and show only default mana bar in bottom right corner
+    ; TODO
+    ;   implement login
+    ;      wait a few seconds before each action
+    ;         get character screen position based on character list
+    ;            load character profiles from savefile
+    ;      consider closing ethereum miner before trying login due to impredictability of wait times
+    ;         reopen miner after
+    ;   implement disconnect detection based on window title (changes from "Tibia - <character_name>" to "Tibia")
+    ; TODO
+    ;   test sleep monitor with nircmd cmd program
+    ; TODO
+    ;   allow changing hotkeys on GUI
+    ; [x]TODO
+    ;   [x]add paladin spells and rotation
+    ;   [x]add knight spells and rotation
+    ; TODO
+    ;   save and read necessary state from savefile
+    ; TODO
+    ;   instead of using hotkeys, spam the full spell words for each spell
+    ; [x]TODO
+    ;   [x]add mana counting logic
+
+;======================================================================================

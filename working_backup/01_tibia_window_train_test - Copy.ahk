@@ -90,6 +90,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     global healingCooldown := {"type": "healing", "cooldown": 1000, "currentCooldown": 0}
     global attackCooldown := {"type": "attack", "cooldown": 2000, "currentCooldown": 0}
     global slowSpellCooldown := {"type": "slowSpell", "cooldown": 4000, "currentCooldown": 0}
+    global foodCooldown := {"type": "food", "cooldown": 1000, "currentCooldown": 0}
     
     global printSpells := true
     global mainChar := new character
@@ -105,19 +106,21 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ;paladin spells
     global salvationSpell := new spell    
     global divineCalderaSpell := new spell
+    global brownMushroomSpell := new spell
 
     ;global config
     global latency := 300 ;ms
     global updateRate := 190 ;ms
-    global printInsteadOfSendHotkey := true
+    global printInsteadOfSendHotkey := false
     global stop := false
     global considerLatency := false
     global muteDebug := false
+    global copyInputFromGameToScreen := true
     
     ;vocation spells
-    global sorcererSpells := {"invisibility": invisibilitySpell, "hells core": hellsCoreSpell, "rage of the skies": rageOfTheSkiesSpell}
-    global knightSpells := {"fierce berserk": fierceBerserkSpell, "charge": chargeSpell}
-    global paladinSpells := {"salvation": salvationSpell, "divine caldera": divineCalderaSpell}
+    global sorcererSpells := {"invisibility": invisibilitySpell, "hells core": hellsCoreSpell, "rage of the skies": rageOfTheSkiesSpell, "brown mushroom": brownMushroomSpell}
+    global knightSpells := {"fierce berserk": fierceBerserkSpell, "charge": chargeSpell, "brown mushroom": brownMushroomSpell}
+    global paladinSpells := {"salvation": salvationSpell, "divine caldera": divineCalderaSpell, "brown mushroom": brownMushroomSpell}
     global allSpells := [sorcererSpells, knightSpells, paladinSpells]
 
 ;======================================================================================
@@ -133,6 +136,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     global LevelEdit :=
     ;global RefreshDataButton :=
     global LatencyEdit :=
+    global CopyInputFromGameToScreenCheckbox :=
 
     ;stats
     global MaxMana :=
@@ -174,6 +178,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     ;paladin
         salvationSpell.init( "salvation", 210, 1000 , "exura gran san", [healingCooldown], "{F1}" )
         divineCalderaSpell.init( "divine caldera", 160, 2000 , "exevo mas san", [attackCooldown], "{F3}" )
+    ;food
+        brownMushroomSpell.init( "brown mushroom", 0, 264000 , "", [foodCooldown], "{F2}" )
 
     ;MAINCHAR DEPENDS ON SPELLS
     ;mainChar.init(160, vocations.sorcerer, 100)
@@ -254,6 +260,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
                     debugPrint(this.hotkey " has been pressed.")
                 } else {
                     Send, % this.hotkey
+                    if(copyInputFromGameToScreen){
+                        print(this.hotkey " has been pressed.")
+                    }
                 }
             } else {
                 debugPrint(this.name " has not been cast due to remaining cooldown(s).")
@@ -411,6 +420,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     }
     debugClear(msg){
         GuiControl, Text, debugWindow, % msg
+    }
+    print(msg){
+        finalMsg := ""
+        GuiControlGet, finalMsg, , DebugWindow
+        finalMsg .= "`n" msg
+        GuiControl, Text, DebugWindow , % finalMsg
     }
     debugPrint(msg){
         if(!muteDebug){
@@ -598,10 +613,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         Gui, Add, Text, +r1 +wrap +w60 vWaitTimeBeforeStartingRotationWithLatency, % mainChar.data.waitTimeBeforeStartingRotationWithLatency
 
         ;meta
-        Gui, Add, Checkbox, +wrap vPrintInsteadOfPress gPrintInsteadOfPressCallback +ys, Send to debug window instead of game
+        Gui, Add, Checkbox, +wrap vPrintInsteadOfPress gPrintInsteadOfPressCallback +ys, Send to debug window EXCLUSIVELY
+        Gui, Add, Checkbox, +r1 +wrap vMuteDebugButton gMuteDebugButtonCallback, Mute Debug
+        Gui, Add, Checkbox, +r1 +wrap vCopyInputFromGameToScreenCheckbox gCopyInputFromGameToScreenCheckboxCallback, Show game input
         Gui, Add, Button, +r1 +wrap vStartRotation gStartRotationCallback, Start Rotation
         Gui, Add, Checkbox, +r1 +wrap vStopRotation gStopRotationCallback, Stop Rotation
-        Gui, Add, Checkbox, +r1 +wrap vMuteDebugButton gMuteDebugButtonCallback, Mute Debug
 
         Gui, Show
         refreshGUI()
@@ -653,6 +669,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         Gui, Submit, NoHide
         debugPrint("MuteDebugButtonCallback called, result: " MuteDebugButton)
         muteDebug := MuteDebugButton
+    }
+    CopyInputFromGameToScreenCheckboxCallback(){
+        Gui, Submit, NoHide
+        debugPrint("CopyInputFromGameToScreenCheckboxCallback called, result: " CopyInputFromGameToScreenCheckbox)
+        copyInputFromGameToScreen := CopyInputFromGameToScreenCheckbox
     }
     refreshGUI(){
         guiData := getGUIData()
