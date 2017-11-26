@@ -5,31 +5,16 @@
         TrayTip, % "Ctrl+G", "Current test ran."
     return
 
-    ^p::
-        ;debugPrint("Empty test function.")
-    return
-    ^i::
-        invisibilitySpell.decreaseCooldowns(500)
-        ;debugPrint("Empty test function.")
-    return
-
     ^ç::
         debugClear("")
     return
+
     ^e::
         debugPrint(mainChar.toString())
         ;TrayTip, mainChar.toString(), % mainChar.toString()
         ;MsgBox, % mainChar.toString()
     return
 
-    ;^+!r::
-    ;return
-    ^+!d::
-        TrayTip, Debug info, % "No debug info."
-    return
-    ^+!f::
-        TrayTip, % "Ctrl+Shift+F", % "No action assigned."
-    return
     ^q::
         qFunc()    
     return
@@ -39,7 +24,30 @@
             Reload
         }
     return
+    
+/*=UNUSED HOTKEYS======================================================================
 
+    ^p::
+        ;debugPrint("Empty test function.")
+    return
+
+    ^i::
+        invisibilitySpell.decreaseCooldowns(500)
+        ;debugPrint("Empty test function.")
+    return
+    
+    ^+!r::
+    return
+    
+    ^+!d::
+        TrayTip, Debug info, % "No debug info."
+    return
+    
+    ^+!f::
+        TrayTip, % "Ctrl+Shift+F", % "No action assigned."
+    return
+
+    ;legacy
     ^+!e::
         while(!stop){
             WinRestore % "Tibia -"
@@ -53,6 +61,7 @@
         }
     return
 
+    ;legacy
     ^+!q::
         stop := !stop
         status := stop ? "Stopped" : "Running"
@@ -60,5 +69,7 @@
         Menu, Tray, Icon, % current_icon
         TrayTip, % "Current Status", % status
     return
+    
+*/=====================================================================================
 
 ;======================================================================================

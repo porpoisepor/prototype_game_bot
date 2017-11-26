@@ -26,9 +26,10 @@
     ;       [x]keep track of mana spent
     ;           [x]if spent mana >= maxMana, break out of loop and start wait(waitTime)
     ;
-    ; TODO ;IMPORTANT
-    ;   find out at which point globals not being in the beginning of the file matter
+    ; [x]TODO ;IMPORTANT
+    ;   [x]find out at which point globals not being in the beginning of the file matter
     ;       [x]they do matter sometimes
+    ;       [x]autoexecute section is the relevant term; it ends upon return, exit or hotkeys are defined, whicever comes first
     ; TODO
     ;   [ ]stuff all global config inside a global configState object
     ; [ ]TODO

@@ -1,5 +1,8 @@
 ;INIT =================================================================================
 
+    ;LATER OBJECTS DEPEND ON SOME GLOBAL CONFIGURATION SUCH AS LATENCY
+    currentConfig.init()
+
     ;SPELLS MUST BE INITIALIZED FIRST
     ;sorcerer
         invisibilitySpell.init( "invisibility", 440, 2000 , "utana vid", [supportCooldown], "{F1}" )
@@ -20,7 +23,5 @@
     ;mainChar.init(120, vocations.paladin, 100)
     mainChar.init(30, vocations.paladin, 100)
 
-    ;CONFIG DEPENDS ON MAINCHAR
-    currentConfig.init(false, mainChar)
 
 ;======================================================================================
