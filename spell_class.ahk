@@ -18,16 +18,16 @@
             this.words := words
             this.cooldownGroups := cooldownGroups
             this.manaConsumptionPerSec := this.mana * 1000 / this.cooldown
-            this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + latency)
+            this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + currentConfig.latency)
             this.hotkey := hotkey
         }
         recalculateLatency(){
-            this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + latency)
+            this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + currentConfig.latency)
         }
         activateCooldowns(){
-            this.currentCooldown := this.cooldown + latency
+            this.currentCooldown := this.cooldown + currentConfig.latency
             for cooldownGroupIndex, cooldownGroup in this.cooldownGroups{
-                cooldownGroup.currentCooldown := cooldownGroup.cooldown + latency
+                cooldownGroup.currentCooldown := cooldownGroup.cooldown + currentConfig.latency
             }  
         }
         decreaseCooldowns(milliseconds){
@@ -63,11 +63,11 @@
                 this.activateCooldowns()
                 debugPrint(this.name " has been cast.")
                 castSuccessful := true
-                if(printInsteadOfSendHotkey){
+                if(currentConfig.printInsteadOfSendHotkey){
                     debugPrint(this.hotkey " has been pressed.")
                 } else {
                     Send, % this.hotkey
-                    if(copyInputFromGameToScreen){
+                    if(currentConfig.copyInputFromGameToScreen){
                         print(this.hotkey " has been pressed.")
                     }
                 }

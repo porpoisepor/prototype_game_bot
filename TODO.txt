@@ -1,6 +1,43 @@
 ;TODO =================================================================================
     ; CURRENT: add save / load from file
-    ; CURRENT: polish configState
+    ; [ ]TODO
+    ; [ ]add GUI radio buttons, checkmarks and buttons for better control
+    ;   [x]add button for printInsteafOfSendHotkey
+    ;   [x]add button for changing stop flag
+    ;   [x]radio buttons for vocation
+    ;   [x]textedit for level
+    ;   [x]checkmark for food
+    ;      [x]meh
+    ;   [x]button for refresh
+    ;      [x]nope
+    ;   [ ]add other controls
+    ; TODO
+    ;   move window position so it hides window when using 
+    ;   add flag to control if window shall be hidden or not
+    ; TODO
+    ;   open tibialyzer and make it hide all health/mana bars and show only default mana bar in bottom right corner
+    ; TODO
+    ;   implement login
+    ;      wait a few seconds before each action
+    ;         get character screen position based on character list
+    ;            load character profiles from savefile
+    ;      consider closing ethereum miner before trying login due to impredictability of wait times
+    ;         reopen miner after
+    ;   implement disconnect detection based on window title (changes from "Tibia - <character_name>" to "Tibia")
+    ; TODO
+    ;   test sleep monitor with nircmd cmd program
+    ; TODO
+    ;   allow changing hotkeys on GUI
+    ; [ ]TODO
+    ;   [ ]save and read necessary state from savefile
+    ; TODO
+    ;   instead of using hotkeys, spam the full spell words for each spell
+
+
+;======================================================================================
+
+;DONE =================================================================================
+    ; [x]CURRENT: polish configState
     ; [x]TODO
     ;   [x]add currentCooldown property for each spell and each group
     ; [x]TODO
@@ -30,44 +67,12 @@
     ;   [x]find out at which point globals not being in the beginning of the file matter
     ;       [x]they do matter sometimes
     ;       [x]autoexecute section is the relevant term; it ends upon return, exit or hotkeys are defined, whicever comes first
-    ; TODO
-    ;   [ ]stuff all global config inside a global configState object
-    ; [ ]TODO
-    ; [ ]add GUI radio buttons, checkmarks and buttons for better control
-    ;   [x]add button for printInsteafOfSendHotkey
-    ;   [x]add button for changing stop flag
-    ;   [x]radio buttons for vocation
-    ;   [x]textedit for level
-    ;   [x]checkmark for food
-    ;      [x]meh
-    ;   [x]button for refresh
-    ;      [x]nope
-    ;   [ ]add other controls
-    ; TODO
-    ;   move window position so it hides window when using 
-    ;   add flag to control if window shall be hidden or not
-    ; TODO
-    ;   open tibialyzer and make it hide all health/mana bars and show only default mana bar in bottom right corner
-    ; TODO
-    ;   implement login
-    ;      wait a few seconds before each action
-    ;         get character screen position based on character list
-    ;            load character profiles from savefile
-    ;      consider closing ethereum miner before trying login due to impredictability of wait times
-    ;         reopen miner after
-    ;   implement disconnect detection based on window title (changes from "Tibia - <character_name>" to "Tibia")
-    ; TODO
-    ;   test sleep monitor with nircmd cmd program
-    ; TODO
-    ;   allow changing hotkeys on GUI
+    ; [x]TODO
+    ;   [x]stuff all global config inside a global configState object
+
     ; [x]TODO
     ;   [x]add paladin spells and rotation
     ;   [x]add knight spells and rotation
-    ; TODO
-    ;   save and read necessary state from savefile
-    ; TODO
-    ;   instead of using hotkeys, spam the full spell words for each spell
     ; [x]TODO
     ;   [x]add mana counting logic
-
-;======================================================================================
+;========================================================================================

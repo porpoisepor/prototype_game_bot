@@ -287,6 +287,61 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "game_bot.ahk",
+			"settings":
+			{
+				"buffer_size": 910,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "globals.ahk",
+			"settings":
+			{
+				"buffer_size": 2321,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config_class.ahk",
+			"settings":
+			{
+				"buffer_size": 696,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 18 files for \"latency\" (regex)\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\character_class.ahk:\n   56          updateManaConsumption(){\n   57              rotationConsumptionPerSec := 0\n   58:             rotationConsumptionPerSecWithLatency := 0\n   59              for spellName, spell in this.spells{\n   60                  rotationConsumptionPerSec += spell.manaConsumptionPerSec\n   61:                 rotationConsumptionPerSecWithLatency += spell.manaConsumptionPerSecWithLatency\n   62              }\n   63              this.data.rotationConsumptionPerSec := rotationConsumptionPerSec\n   64:             this.data.rotationConsumptionPerSecWithLatency := rotationConsumptionPerSecWithLatency\n   65          }\n   66          updateRotationTime(){\n   ..\n   68              this.data.timeForFullMana := this.data.maxMana / (this.data.manaRegen - this.data.autoattackManaPerSec)\n   69              this.data.timeForFullManaConsumption := this.data.maxMana / this.data.rotationConsumptionPerSec\n   70:             this.data.timeForFullManaConsumptionWithLatency := this.data.maxMana / this.data.rotationConsumptionPerSecWithLatency\n   71              this.data.waitTimeBeforeStartingRotation := this.data.timeForFullMana - this.data.timeForFullManaConsumption\n   72:             this.data.waitTimeBeforeStartingRotationWithLatency := this.data.timeForFullMana - this.data.timeForFullManaConsumptionWithLatency\n   73          }\n   74          updateMana(currentMana){\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\config_class.ahk:\n    6          notRunningIcon := this.iconsDir \"not_running.bmp\"\n    7          ;moved here\n    8:         latency := 300 ;ms\n    9          updateRate := 190 ;ms\n   10          printInsteadOfSendHotkey := false\n   11          stop := false\n   12:         considerLatency := false\n   13          muteDebug := false\n   14          copyInputFromGameToScreen := true\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\globals.ahk:\n   28  \n   29      ;global config\n   30:     global latency := 300 ;ms\n   31      global updateRate := 190 ;ms\n   32      global printInsteadOfSendHotkey := false\n   33      global stop := false\n   34:     global considerLatency := false\n   35      global muteDebug := false\n   36      global copyInputFromGameToScreen := true\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\gui_callbacks.ahk:\n   11          refreshGUI()\n   12      }\n   13:     LatencyEditCallback(){\n   14          Gui, Submit, NoHide\n   15:         debugPrint(\"LatencyEditCallback called, result: \" LatencyEdit)\n   16          refreshGUI()\n   17          recalculateAllSpellLatencies()\n   ..\n   45      refreshGUI(){\n   46          guiData := getGUIData()\n   47:         latency := guiData.latency\n   48          mainChar.init(guiData.level, guiData.vocation, 0)\n   49          GuiControl, Text, MaxMana, % mainChar.data.maxMana\n   ..\n   51          GuiControl, Text, AutoattackManaPerSec, % mainChar.data.autoattackManaPerSec\n   52          GuiControl, Text, RotationConsumptionPerSec, % mainChar.data.rotationConsumptionPerSec\n   53:         GuiControl, Text, RotationConsumptionPerSecWithLatency, % mainChar.data.rotationConsumptionPerSecWithLatency\n   54          GuiControl, Text, SpentMana, % mainChar.data.spentMana\n   55          GuiControl, Text, TimeForFullMana, % mainChar.data.timeForFullMana\n   56          GuiControl, Text, TimeForFullManaConsumption, % mainChar.data.timeForFullManaConsumption\n   57          GuiControl, Text, WaitTimeBeforeStartingRotation, % mainChar.data.waitTimeBeforeStartingRotation\n   58:         GuiControl, Text, WaitTimeBeforeStartingRotationWithLatency, % mainChar.data.waitTimeBeforeStartingRotationWithLatency\n   59      }\n   60      getGUIData(){\n   ..\n   62          vocation := vocations[VocationRadioGroup - 1]\n   63          level := LevelEdit\n   64:         latency := LatencyEdit\n   65          ;VocationRadioGroup\n   66          ;LevelEdit\n   67:         ;LatencyEdit\n   68:         debugPrint(\"vocation, level, latency: \" vocation \", \" level \", \" latency)\n   69:         return { \"vocation\": vocation, \"level\": level, \"latency\": latency}\n   70      }\n   71      initGUI(){\n   ..\n   82          Gui, Add, Edit, vLevelEdit gLevelEditCallback, 100\n   83          ;Gui, Add, Button, vRefreshDataButton +wrap , Refresh\n   84:         Gui, Add, Text, +r1 +wrap +ys, Latency(ms)\n   85:         Gui, Add, Edit, vLatencyEdit gLatencyEditCallback, 300\n   86          ;stats\n   87          Gui, Add, Text, +r1 +wrap +ys, maxMana\n   ..\n   89          Gui, Add, Text, +r1 +wrap , autoattackManaPerSec\n   90          Gui, Add, Text, +r1 +wrap , rotationConsumptionPerSec\n   91:         Gui, Add, Text, +r1 +wrap , rotationConsumptionPerSecWithLatency\n   92          Gui, Add, Text, +r1 +wrap , spentMana\n   93          Gui, Add, Text, +r1 +wrap , timeForFullMana\n   94          Gui, Add, Text, +r1 +wrap , timeForFullManaConsumption\n   95          Gui, Add, Text, +r1 +wrap , waitTimeBeforeStartingRotation\n   96:         Gui, Add, Text, +r1 +wrap , waitTimeBeforeStartingRotationWithLatency\n   97          ;stats\n   98          Gui, Add, Text, +r1 +wrap +w60 +ys vMaxMana, % mainChar.data.maxMana\n   ..\n  100          Gui, Add, Text, +r1 +wrap +w60 vAutoattackManaPerSec, % mainChar.data.autoattackManaPerSec\n  101          Gui, Add, Text, +r1 +wrap +w60 vRotationConsumptionPerSec, % mainChar.data.rotationConsumptionPerSec\n  102:         Gui, Add, Text, +r1 +wrap +w60 vRotationConsumptionPerSecWithLatency, % mainChar.data.rotationConsumptionPerSecWithLatency\n  103          Gui, Add, Text, +r1 +wrap +w60 vSpentMana, % mainChar.data.spentMana\n  104          Gui, Add, Text, +r1 +wrap +w60 vTimeForFullMana, % mainChar.data.timeForFullMana\n  105          Gui, Add, Text, +r1 +wrap +w60 vTimeForFullManaConsumption, % mainChar.data.timeForFullManaConsumption\n  106          Gui, Add, Text, +r1 +wrap +w60 vWaitTimeBeforeStartingRotation, % mainChar.data.waitTimeBeforeStartingRotation\n  107:         Gui, Add, Text, +r1 +wrap +w60 vWaitTimeBeforeStartingRotationWithLatency, % mainChar.data.waitTimeBeforeStartingRotationWithLatency\n  108  \n  109          ;meta\n  ...\n  120          ;autoattackManaPerSec: 0\n  121          ;rotationConsumptionPerSec: 290.000000\n  122:         ;rotationConsumptionPerSecWithLatency: 231.103679\n  123          ;spentMana: 0\n  124          ;timeForFullMana: 26.250000\n  125          ;timeForFullManaConsumption: 1.448276\n  126:         ;timeForFullManaConsumptionWithLatency: 1.817366\n  127          ;waitTimeBeforeStartingRotation: 24.801724\n  128:         ;waitTimeBeforeStartingRotationWithLatency: 24.432634\n  129      }\n  130  \n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\gui_labels.ahk:\n   10      global LevelEdit :=\n   11      ;global RefreshDataButton :=\n   12:     global LatencyEdit :=\n   13      global CopyInputFromGameToScreenCheckbox :=\n   14  \n   ..\n   18      global AutoattackManaPerSec :=\n   19      global RotationConsumptionPerSec :=\n   20:     global RotationConsumptionPerSecWithLatency :=\n   21      global SpentMana :=\n   22      global TimeForFullMana :=\n   23      global TimeForFullManaConsumption :=\n   24      global WaitTimeBeforeStartingRotation :=\n   25:     global WaitTimeBeforeStartingRotationWithLatency :=\n   26  \n   27      ;program config\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\helpers.ahk:\n   89          while(!stop){\n   90              doSingleRotation()\n   91:             sleepWhileNotifyingRemainingTime(mainChar.data.waitTimeBeforeStartingRotationWithLatency * 1000)\n   92:             mainChar.decreaseCooldowns(mainChar.data.waitTimeBeforeStartingRotationWithLatency * 1000)\n   93          }\n   94      }\n   ..\n  117          for vocationSpellCategoryIndex, vocationSpellCategory in allSpells{\n  118              for spellName, spell in vocationSpellCategory{\n  119:                 spell.recalculateLatency()\n  120              }\n  121          }\n  122          mainChar.update()\n  123          ;for each spell\n  124:         ;    spell.recalculateLatency()\n  125          ;global sorcererSpells := {\"invisibility\": invisibilitySpell, \"hells core\": hellsCoreSpell, \"rage of the skies\": rageOfTheSkiesSpell}\n  126          ;global knightSpells := {\"fierce berserk\": fierceBerserkSpell, \"charge\": chargeSpell}\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\init.ahk:\n    1  ;INIT =================================================================================\n    2  \n    3:     ;LATER OBJECTS DEPEND ON SOME GLOBAL CONFIGURATION SUCH AS LATENCY\n    4      currentConfig.init()\n    5  \n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\spell_class.ahk:\n    9          cooldownGroups := []\n   10          manaConsumptionPerSec := 1\n   11:         manaConsumptionPerSecWithLatency := 1\n   12          hotkey := \"\"\n   13  \n   ..\n   19              this.cooldownGroups := cooldownGroups\n   20              this.manaConsumptionPerSec := this.mana * 1000 / this.cooldown\n   21:             this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + latency)\n   22              this.hotkey := hotkey\n   23          }\n   24:         recalculateLatency(){\n   25:             this.manaConsumptionPerSecWithLatency := this.mana * 1000 / (this.cooldown + latency)\n   26          }\n   27          activateCooldowns(){\n   28:             this.currentCooldown := this.cooldown + latency\n   29              for cooldownGroupIndex, cooldownGroup in this.cooldownGroups{\n   30:                 cooldownGroup.currentCooldown := cooldownGroup.cooldown + latency\n   31              }  \n   32          }\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\TODO.txt:\n   20      ;       [x]add hotkeys for each spell\n   21      ;           [x]also add it to the cast() of each spell\n   22:     ;       [x]find out where latency should go\n   23:     ;          [x]find if it should be currentCooldown <= (0 - latency) in the mid of the rotation cycle\n   24:     ;               [x]NO, actually it should be currentCooldown := cooldown + latency in the cooldown activation()\n   25      ;       [x]check in loop if spells should be cast every N milliseconds, N is the chosen updateRate (preferably < 200ms per udpate, > 5 per second)\n   26      ;       [x]keep track of mana spent\n\nC:\\Users\\win_second_lobster\\Desktop\\AHK macros\\tibia_trainer_folder\\unit_tests.ahk:\n   68          ;       [x]add hotkeys for each spell\n   69          ;           [x]also add it to the cast() of each spell\n   70:         ;       [x]find out where latency should go\n   71:         ;          [x]find if it should be currentCooldown <= (0 - latency) in the mid of the rotation cycle\n   72:         ;               [x]NO, actually it should be currentCooldown := cooldown + latency in the cooldown activation()\n   73          ;       [x]check in loop if spells should be cast every N milliseconds, N is the chosen updateRate (preferably < 200ms per udpate, > 5 per second)\n   74          ;       [x]keep track of mana spent\n\n63 matches across 10 files\n",
+			"settings":
+			{
+				"buffer_size": 11185,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "hotkeys.ahk",
+			"settings":
+			{
+				"buffer_size": 1774,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gui_callbacks.ahk",
+			"settings":
+			{
+				"buffer_size": 6736,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -393,21 +448,22 @@
 	],
 	"file_history":
 	[
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/spell_class.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/init.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/TODO.txt",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_multiline_comment.sublime-snippet",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/hotkeys.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/bs_4.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_callbacks.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/unit_tests.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/hotkeys.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/01_tibia_window_train_test - Copy.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/00_tibia_window_train_test.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/globals.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/helpers.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/spell_class.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/character_class.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config_class.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/TODO.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_labels.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/init.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/sample_debug_log_2.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/sample_debug_log.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/01_tibia_window_train_test - Copy.ahk",
@@ -519,16 +575,15 @@
 		"/E/Documents/0_img/ch/tags_test.txt",
 		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.219/changelog.txt",
 		"/E/Documents/book_windows/graphical_programming/superbible_downloads/sb7code-master/src/movingtri/movingtri.cpp",
-		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.150/Read Me.txt",
-		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.527/Read Me.txt"
+		"/C/Users/win_second_lobster/AppData/Local/Temp/Rar$DIa0.150/Read Me.txt"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 105.0,
 		"where_history":
 		[
 			""
@@ -536,9 +591,16 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"global",
+			"latency",
+			"global",
+			"currentconfig",
+			"configstate",
+			"eatfood",
+			"updatestate",
 			"printspell",
 			"instead",
 			"printInstead",
@@ -659,14 +721,7 @@
 			"wall",
 			"come",
 			"setx",
-			"comp",
-			"XXXXX\n00000\n",
-			"\\n{2,}",
-			"\\n+",
-			"\\n",
-			"e:",
-			"java",
-			"jdk"
+			"comp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -801,8 +856,454 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "game_bot.ahk",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								598,
+								598
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "globals.ahk",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1400,
+								1400
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config_class.ahk",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								464,
+								464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11185,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										269,
+										276
+									],
+									[
+										470,
+										477
+									],
+									[
+										512,
+										519
+									],
+									[
+										683,
+										690
+									],
+									[
+										723,
+										730
+									],
+									[
+										1088,
+										1095
+									],
+									[
+										1158,
+										1165
+									],
+									[
+										1357,
+										1364
+									],
+									[
+										1436,
+										1443
+									],
+									[
+										1695,
+										1702
+									],
+									[
+										1852,
+										1859
+									],
+									[
+										2086,
+										2093
+									],
+									[
+										2255,
+										2262
+									],
+									[
+										2501,
+										2508
+									],
+									[
+										2586,
+										2593
+									],
+									[
+										2624,
+										2631
+									],
+									[
+										2796,
+										2803
+									],
+									[
+										2815,
+										2822
+									],
+									[
+										3216,
+										3223
+									],
+									[
+										3270,
+										3277
+									],
+									[
+										3713,
+										3720
+									],
+									[
+										3772,
+										3779
+									],
+									[
+										3934,
+										3941
+									],
+									[
+										3945,
+										3952
+									],
+									[
+										4034,
+										4041
+									],
+									[
+										4090,
+										4097
+									],
+									[
+										4126,
+										4133
+									],
+									[
+										4198,
+										4205
+									],
+									[
+										4208,
+										4215
+									],
+									[
+										4439,
+										4446
+									],
+									[
+										4483,
+										4490
+									],
+									[
+										4496,
+										4503
+									],
+									[
+										4808,
+										4815
+									],
+									[
+										5149,
+										5156
+									],
+									[
+										5567,
+										5574
+									],
+									[
+										5621,
+										5628
+									],
+									[
+										6134,
+										6141
+									],
+									[
+										6193,
+										6200
+									],
+									[
+										6375,
+										6382
+									],
+									[
+										6566,
+										6573
+									],
+									[
+										6692,
+										6699
+									],
+									[
+										6906,
+										6913
+									],
+									[
+										7126,
+										7133
+									],
+									[
+										7357,
+										7364
+									],
+									[
+										7652,
+										7659
+									],
+									[
+										7762,
+										7769
+									],
+									[
+										8003,
+										8010
+									],
+									[
+										8152,
+										8159
+									],
+									[
+										8664,
+										8671
+									],
+									[
+										8916,
+										8923
+									],
+									[
+										9159,
+										9166
+									],
+									[
+										9206,
+										9213
+									],
+									[
+										9299,
+										9306
+									],
+									[
+										9359,
+										9366
+									],
+									[
+										9406,
+										9413
+									],
+									[
+										9527,
+										9534
+									],
+									[
+										9697,
+										9704
+									],
+									[
+										9976,
+										9983
+									],
+									[
+										10064,
+										10071
+									],
+									[
+										10192,
+										10199
+									],
+									[
+										10683,
+										10690
+									],
+									[
+										10775,
+										10782
+									],
+									[
+										10907,
+										10914
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								8758,
+								8758
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2970.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "hotkeys.ahk",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "gui_callbacks.ahk",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1905,
+								1905
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -812,7 +1313,7 @@
 	},
 	"input":
 	{
-		"height": 34.0
+		"height": 40.0
 	},
 	"layout":
 	{

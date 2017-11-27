@@ -20,7 +20,7 @@
     return
 
     ^r::
-        if(reloadable){
+        if(currentConfig.reloadable){
             Reload
         }
     return

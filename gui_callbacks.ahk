@@ -19,7 +19,7 @@
     }
     PrintInsteadOfPressCallback(){
         Gui, Submit, NoHide
-        printInsteadOfSendHotkey := PrintInsteadOfPress
+        currentConfig.printInsteadOfSendHotkey := PrintInsteadOfPress
         debugPrint("PrintInsteadOfPressCallback called, result: " PrintInsteadOfPress)
     }
     StartRotationCallback(){
@@ -30,21 +30,21 @@
     StopRotationCallback(){
         Gui, Submit, NoHide
         debugPrint("StopRotationCallback called, result: " StopRotation)
-        stop := StopRotation
+        currentConfig.stop := StopRotation
     }
     MuteDebugButtonCallback(){
         Gui, Submit, NoHide
         debugPrint("MuteDebugButtonCallback called, result: " MuteDebugButton)
-        muteDebug := MuteDebugButton
+        currentConfig.muteDebug := MuteDebugButton
     }
     CopyInputFromGameToScreenCheckboxCallback(){
         Gui, Submit, NoHide
         debugPrint("CopyInputFromGameToScreenCheckboxCallback called, result: " CopyInputFromGameToScreenCheckbox)
-        copyInputFromGameToScreen := CopyInputFromGameToScreenCheckbox
+        currentConfig.copyInputFromGameToScreen := CopyInputFromGameToScreenCheckbox
     }
     refreshGUI(){
         guiData := getGUIData()
-        latency := guiData.latency
+        currentConfig.latency := guiData.latency
         mainChar.init(guiData.level, guiData.vocation, 0)
         GuiControl, Text, MaxMana, % mainChar.data.maxMana
         GuiControl, Text, ManaRegen, % mainChar.data.manaRegen
@@ -61,12 +61,12 @@
         Gui, Submit, NoHide
         vocation := vocations[VocationRadioGroup - 1]
         level := LevelEdit
-        latency := LatencyEdit
+        localLatency := LatencyEdit
         ;VocationRadioGroup
         ;LevelEdit
         ;LatencyEdit
-        debugPrint("vocation, level, latency: " vocation ", " level ", " latency)
-        return { "vocation": vocation, "level": level, "latency": latency}
+        debugPrint("vocation, level, latency: " vocation ", " level ", " localLatency)
+        return { "vocation": vocation, "level": level, "latency": localLatency}
     }
     initGUI(){
         Gui, font, s8, Consolas

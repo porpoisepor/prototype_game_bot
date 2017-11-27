@@ -87,7 +87,7 @@
             for key, value in this.data{
                 this.stringRepresentation .= key ": " value "`n"
             }
-            if(printSpells){
+            if(currentConfig.printSpells){
                 for spellName, actualSpell in this.spells{
                     this.stringRepresentation .= "`t" spellName ": " actualSpell "`n"
                     for spellProperty, spellPropertyValue in actualSpell{

@@ -8,7 +8,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include globals.ahk
 #Include gui_labels.ahk
-#Include config.ahk
 #Include init.ahk
 #Include spell_class.ahk
 #Include character_class.ahk
@@ -18,13 +17,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include init.ahk
 #Include unit_tests.ahk
 
+loadConfig()
+initGUI()
+
 ;must be last or else it would close the auto-execute section(?confirm?)
 #Include hotkeys.ahk
 
 ;MAIN =================================================================================
 
     qFunc(){
-        initGUI()
+        ;initGUI()
     }
 
 ;======================================================================================

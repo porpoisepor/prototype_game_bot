@@ -4,12 +4,10 @@
     class sorcererProfile{
         static spellPlan := ["invisibility", "hells core", "rage of the skies"]
     }
-
     changeLevel(){
         mainChar.changeLevel(mainChar.data.level + 1)
         updateDisplay1()
     }
-
     updateDisplay1(){
         GuiControl, Text, DisplayText1, % mainChar.toString()
     }
@@ -23,7 +21,7 @@
         GuiControl, Text, DebugWindow , % finalMsg
     }
     debugPrint(msg){
-        if(!muteDebug){
+        if(!currentConfig.muteDebug){
             finalMsg := ""
             GuiControlGet, finalMsg, , DebugWindow
             finalMsg .= "`n" msg
@@ -55,11 +53,9 @@
     minimizeGameWindow(){
         ;WinMinimize, % "Tibia -"
     }
-
     sleepForOneUpdateUnit(){
-        Sleep, % updateRate
+        Sleep, % currentConfig.updateRate
     }
-
     doSingleRotation(){
         focusGameWindow()
         Sleep % 500
@@ -73,7 +69,7 @@
                 debugPrint("mainChar.data.spentMana: " mainChar.data.spentMana)
             }
             sleepForOneUpdateUnit()
-            mainChar.decreaseCooldowns(updateRate)
+            mainChar.decreaseCooldowns(currentConfig.updateRate)
         }
         mainChar.resetSpentMana()
         minimizeGameWindow()
@@ -86,7 +82,7 @@
         ;WinMinimize % "^(00_tibia|Remain:)"
     }
     doContinuousRotation(){
-        while(!stop){
+        while(!currentConfig.stop){
             doSingleRotation()
             sleepWhileNotifyingRemainingTime(mainChar.data.waitTimeBeforeStartingRotationWithLatency * 1000)
             mainChar.decreaseCooldowns(mainChar.data.waitTimeBeforeStartingRotationWithLatency * 1000)
@@ -105,13 +101,13 @@
                 sleepTimeConstant := 1
                 sleepTime := sleepTimeConstant * 1000
                 keepChecking := false
-                Menu, Tray, Icon, % icons.not_running
+                Menu, Tray, Icon, % currentConfig.icons.not_running
             }
             Sleep, % sleepTime
             remainingTime -= sleepTime
             remainingTimeInSeconds := remainingTime // 1000
         }
-        ;Menu, Tray, Icon, % icons.running
+        ;Menu, Tray, Icon, % currentConfig.icons.running
     }
     recalculateAllSpellLatencies(){
         for vocationSpellCategoryIndex, vocationSpellCategory in allSpells{
@@ -126,6 +122,9 @@
         ;global knightSpells := {"fierce berserk": fierceBerserkSpell, "charge": chargeSpell}
         ;global paladinSpells := {"salvation": salvationSpell, "divine caldera": divineCalderaSpell}
         ;global allSpells := [sorcererSpells, knightSpells, paladinSpells]
+    }
+    loadConfig(){
+        ;
     }
 
 ;======================================================================================
