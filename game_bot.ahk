@@ -19,6 +19,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 loadConfig()
 initGUI()
+;currentConfig.saveStateFromGUIToIniFile()
+currentConfig.loadStateFromIniFile()
 
 ;must be last or else it would close the auto-execute section(?confirm?)
 #Include hotkeys.ahk

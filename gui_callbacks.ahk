@@ -1,14 +1,41 @@
 ;GUI CALLBACKS =================================================================================
 
+    allCallbacks(){
+        vocationRadioGroupCallback()
+        levelEditCallback()
+        PrintInsteadOfPressCallback()
+        StopRotationCallback()
+        MuteDebugButtonCallback()
+        CopyInputFromGameToScreenCheckboxCallback()
+        LatencyEditCallback()
+        ;add more?
+    }
+    loadAllGUIFromState(){
+        loadVocationRadioGroupFromState()
+        loadLevelEditFromState()
+        loadPrintInsteadOfPressFromState()
+        loadStopRotationFromState()
+        loadMuteDebugButtonFromState()
+        loadCopyInputFromGameToScreenCheckboxFromState()
+        loadLatencyEditFromState()
+    }
     vocationRadioGroupCallback(){
         Gui, Submit, NoHide
         debugPrint("VocationRadioGroupCallback called, result: " VocationRadioGroup)
+        currentConfig.vocation := VocationRadioGroup
         refreshGUI()
+    }
+    loadVocationRadioGroupFromState(){
+
     }
     levelEditCallback(){
         Gui, Submit, NoHide
         debugPrint("LevelEditCallback called, result:" LevelEdit)
+        currentConfig.level := LevelEdit
         refreshGUI()
+    }
+    loadLevelEditFromState(){
+    
     }
     LatencyEditCallback(){
         Gui, Submit, NoHide
@@ -17,10 +44,16 @@
         recalculateAllSpellLatencies()
         refreshGUI()
     }
+    loadLatencyEditFromState(){
+    
+    }
     PrintInsteadOfPressCallback(){
         Gui, Submit, NoHide
         currentConfig.printInsteadOfSendHotkey := PrintInsteadOfPress
         debugPrint("PrintInsteadOfPressCallback called, result: " PrintInsteadOfPress)
+    }
+    loadPrintInsteadOfPressFromState(){
+    
     }
     StartRotationCallback(){
         Gui, Submit, NoHide
@@ -32,15 +65,24 @@
         debugPrint("StopRotationCallback called, result: " StopRotation)
         currentConfig.stop := StopRotation
     }
+    loadStopRotationFromState(){
+    
+    }
     MuteDebugButtonCallback(){
         Gui, Submit, NoHide
         debugPrint("MuteDebugButtonCallback called, result: " MuteDebugButton)
         currentConfig.muteDebug := MuteDebugButton
     }
+    loadMuteDebugButtonFromState(){
+    
+    }
     CopyInputFromGameToScreenCheckboxCallback(){
         Gui, Submit, NoHide
         debugPrint("CopyInputFromGameToScreenCheckboxCallback called, result: " CopyInputFromGameToScreenCheckbox)
         currentConfig.copyInputFromGameToScreen := CopyInputFromGameToScreenCheckbox
+    }
+    loadCopyInputFromGameToScreenCheckboxFromState(){
+    
     }
     refreshGUI(){
         guiData := getGUIData()
@@ -65,7 +107,7 @@
         ;VocationRadioGroup
         ;LevelEdit
         ;LatencyEdit
-        debugPrint("vocation, level, latency: " vocation ", " level ", " localLatency)
+        debugPrint("getGUIData() called. Vocation, level, latency: " vocation ", " level ", " localLatency)
         return { "vocation": vocation, "level": level, "latency": localLatency}
     }
     initGUI(){
@@ -79,7 +121,7 @@
         Gui, Add, Radio, gVocationRadioGroupCallback, Knight
         Gui, Add, Radio, gVocationRadioGroupCallback, Paladin
         Gui, Add, Text, +r1 +wrap +ys, Level
-        Gui, Add, Edit, vLevelEdit gLevelEditCallback, 100
+        Gui, Add, Edit, vLevelEdit gLevelEditCallback, % currentConfig.level
         ;Gui, Add, Button, vRefreshDataButton +wrap , Refresh
         Gui, Add, Text, +r1 +wrap +ys, Latency(ms)
         Gui, Add, Edit, vLatencyEdit gLatencyEditCallback, 300

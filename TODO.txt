@@ -1,5 +1,6 @@
 ;TODO =================================================================================
-    ; CURRENT: add save / load from file
+    ; CURRENT: implement loadStateToGUI()
+    ; CURRENT: implement loadAllGUIFromState()
     ; [ ]TODO
     ; [ ]add GUI radio buttons, checkmarks and buttons for better control
     ;   [x]add button for printInsteafOfSendHotkey
@@ -37,6 +38,7 @@
 ;======================================================================================
 
 ;DONE =================================================================================
+    ; [x]CURRENT: add save / load from file
     ; [x]CURRENT: polish configState
     ; [x]TODO
     ;   [x]add currentCooldown property for each spell and each group

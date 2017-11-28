@@ -12,7 +12,7 @@
         GuiControl, Text, DisplayText1, % mainChar.toString()
     }
     debugClear(msg){
-        GuiControl, Text, debugWindow, % msg
+        GuiControl, Text, DebugWindow, % msg
     }
     print(msg){
         finalMsg := ""
@@ -101,13 +101,13 @@
                 sleepTimeConstant := 1
                 sleepTime := sleepTimeConstant * 1000
                 keepChecking := false
-                Menu, Tray, Icon, % currentConfig.icons.not_running
+                Menu, Tray, Icon, % currentConfig.notRunningIcon
             }
             Sleep, % sleepTime
             remainingTime -= sleepTime
             remainingTimeInSeconds := remainingTime // 1000
         }
-        ;Menu, Tray, Icon, % currentConfig.icons.running
+        ;Menu, Tray, Icon, % currentConfig.runningIcon
     }
     recalculateAllSpellLatencies(){
         for vocationSpellCategoryIndex, vocationSpellCategory in allSpells{
