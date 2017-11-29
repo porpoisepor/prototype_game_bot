@@ -389,19 +389,24 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder"
 	],
 	"file_history":
 	[
+		"/C/Users/win_second_lobster/Desktop/AHK macros/list_gui_test.ahk",
+		"/E/Documents/0_img/ch/ai_shitpost_B.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/unit_tests.ahk",
+		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_template.sublime-snippet",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/game_bot.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_labels.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config_class.ahk",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_callbacks.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/TODO.txt",
+		"/E/Documents/0_img/ch/ai_shitpost_A.txt",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/ini_files/main_ini.ini",
+		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/helpers.ahk",
 		"/E/programas/Tibialyzer v1.3.0/Database/MemoryAddresses.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/memory_tests.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/memory_test.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/ini_files/main_ini.ini",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_callbacks.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/helpers.ahk",
 		"/E/programas/Tibialyzer v1.3.0/Database/settings.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/file_io_test.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/⿝瞂꣖㚘",
@@ -410,7 +415,6 @@
 		"/C/Users/win_second_lobster/Desktop/AHK macros/00_tibia_window_train_test.ahk",
 		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_multiline_comment.sublime-snippet",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/globals.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/unit_tests.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/init.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/config.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/character_class.ahk",
@@ -418,11 +422,9 @@
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/spell_class.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/bs_4.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/01_tibia_window_train_test - Copy.ahk",
-		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/gui_labels.ahk",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/sample_debug_log_2.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/tibia_trainer_folder/sample_debug_log.txt",
 		"/C/Users/win_second_lobster/Desktop/AHK macros/01_tibia_window_train_test - Copy.ahk",
-		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_template.sublime-snippet",
 		"/C/Users/win_second_lobster/AppData/Roaming/Tibia/Server Log.txt",
 		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_separator.sublime-snippet",
 		"/C/Users/win_second_lobster/AppData/Roaming/Sublime Text 3/Packages/User/ahk_default_function.sublime-snippet",
@@ -517,14 +519,11 @@
 		"/E/Documents/C++/collatz/Makefile",
 		"/E/Documents/C++/collatz/final.cpp",
 		"/E/Documents/C++/collatz/Makefile2",
-		"/E/Documents/0_img/ch/obs.txt",
-		"/E/Documents/0_img/ch/obs",
-		"/E/Documents/0_img/ch/game_industry.txt",
-		"/E/Documents/new_series/rick_and_morty/Rick.and.Morty.S03E10.The.Rickchurian.Mortydate.1080p.AMZN.WEBRip.DDP5.1.x264-QOQ[rarbg]/Rick and Morty - 03x10 - The Rickchurian Mortydate.Amazon-WEB-DL,QOQ+Uncensored.WEB-DL.English.HI.C.orig.Addic7ed.co.srt"
+		"/E/Documents/0_img/ch/obs.txt"
 	],
 	"find":
 	{
-		"height": 58.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -539,6 +538,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"result:\"",
+			"getguid",
+			"getguida",
+			"latency",
+			"guicontrol, t",
+			"\"",
+			"\\",
+			"2",
+			"mops",
+			"map",
 			"ReadMemory4byte",
 			")\n",
 			"baseAddress + ",
@@ -656,17 +665,7 @@
 			"elder druid",
 			"master sorcerer",
 			"Elite Knight",
-			"Royal Paladin",
-			"focus",
-			"vdispla",
-			"true",
-			"oficina",
-			".biz",
-			"no-ip",
-			"intel",
-			"intelbra",
-			"tray",
-			"mainch"
+			"Royal Paladin"
 		],
 		"highlight": true,
 		"in_selection": false,

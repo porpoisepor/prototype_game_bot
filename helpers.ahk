@@ -33,7 +33,7 @@
     }
     debugPrintArray(array){
 
-        if(verboseDebug){
+        if(currentConfig.verboseDebug){
         finalMsg := ""
                 GuiControlGet, finalMsg, , DebugWindow
                 finalMsg .= "[ "
@@ -123,8 +123,13 @@
         ;global paladinSpells := {"salvation": salvationSpell, "divine caldera": divineCalderaSpell}
         ;global allSpells := [sorcererSpells, knightSpells, paladinSpells]
     }
+    ;delete?
     loadConfig(){
         ;
+    }
+    ;delete
+    zeroRadioGroup(radioGroup){
+        
     }
 
 ;======================================================================================

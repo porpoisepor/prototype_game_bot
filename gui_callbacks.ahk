@@ -26,16 +26,23 @@
         refreshGUI()
     }
     loadVocationRadioGroupFromState(){
-
+        map := {1:"Sorcerer", 2:"Knight", 3:"Paladin"}
+        map2 := {1:"Sorceror", 2:"Knoight", 3:"Paladon"}
+        ;if another object isn't used, a weird bug happens when debugPrint() and GuiControl both try to access map data, data race? references to same object all seem to cause the same bug
+        ;if the same data is used for any element of map2 the bug also happens which points to an immutable literal object implementation
+        ;debugPrint("% map[currentConfig.vocation]: " map2[currentConfig.vocation])
+        GuiControl, , % map[currentConfig.vocation], 1
+        vocationRadioGroupCallback()
     }
     levelEditCallback(){
         Gui, Submit, NoHide
-        debugPrint("LevelEditCallback called, result:" LevelEdit)
+        debugPrint("LevelEditCallback called, result: " LevelEdit)
         currentConfig.level := LevelEdit
         refreshGUI()
     }
     loadLevelEditFromState(){
-    
+        GuiControl, Text, LevelEdit, % currentConfig.level
+        levelEditCallback()
     }
     LatencyEditCallback(){
         Gui, Submit, NoHide
@@ -45,7 +52,8 @@
         refreshGUI()
     }
     loadLatencyEditFromState(){
-    
+        GuiControl, Text, LatencyEdit, % currentConfig.latency
+        LatencyEditCallback()
     }
     PrintInsteadOfPressCallback(){
         Gui, Submit, NoHide
@@ -53,7 +61,8 @@
         debugPrint("PrintInsteadOfPressCallback called, result: " PrintInsteadOfPress)
     }
     loadPrintInsteadOfPressFromState(){
-    
+        GuiControl, , PrintInsteadOfPress, % currentConfig.printInsteadOfSendHotkey
+        PrintInsteadOfPressCallback()
     }
     StartRotationCallback(){
         Gui, Submit, NoHide
@@ -66,7 +75,8 @@
         currentConfig.stop := StopRotation
     }
     loadStopRotationFromState(){
-    
+        GuiControl, , StopRotation, % currentConfig.stop
+        StopRotationCallback()
     }
     MuteDebugButtonCallback(){
         Gui, Submit, NoHide
@@ -74,7 +84,8 @@
         currentConfig.muteDebug := MuteDebugButton
     }
     loadMuteDebugButtonFromState(){
-    
+        GuiControl, , MuteDebugButton, % currentConfig.muteDebug
+        MuteDebugButtonCallback()
     }
     CopyInputFromGameToScreenCheckboxCallback(){
         Gui, Submit, NoHide
@@ -82,7 +93,11 @@
         currentConfig.copyInputFromGameToScreen := CopyInputFromGameToScreenCheckbox
     }
     loadCopyInputFromGameToScreenCheckboxFromState(){
-    
+        GuiControl, , CopyInputFromGameToScreenCheckbox, % currentConfig.copyInputFromGameToScreen
+        CopyInputFromGameToScreenCheckboxCallback()
+    }
+    SaveStateToFileCallback(){
+        currentConfig.saveStateFromGUIToIniFile()
     }
     refreshGUI(){
         guiData := getGUIData()
@@ -102,8 +117,11 @@
     getGUIData(){
         Gui, Submit, NoHide
         vocation := vocations[VocationRadioGroup - 1]
+        ;vocation := currentConfig.vocation
         level := LevelEdit
+        ;level := currentConfig.level
         localLatency := LatencyEdit
+        ;localLatency := currentConfig.latency
         ;VocationRadioGroup
         ;LevelEdit
         ;LatencyEdit
@@ -111,6 +129,8 @@
         return { "vocation": vocation, "level": level, "latency": localLatency}
     }
     initGUI(){
+        currentConfig.loadStateFromIniFile()
+        
         Gui, font, s8, Consolas
         Gui, Add, Button, +section +w200 +r10, OK
         Gui, Add, Edit, ReadOnly vDisplayText1 +r10 +w590 +wrap +vScroll +ys, aaa
@@ -154,8 +174,11 @@
         Gui, Add, Checkbox, +r1 +wrap vCopyInputFromGameToScreenCheckbox gCopyInputFromGameToScreenCheckboxCallback, Show game input
         Gui, Add, Button, +r1 +wrap vStartRotation gStartRotationCallback, Start Rotation
         Gui, Add, Checkbox, +r1 +wrap vStopRotation gStopRotationCallback, Stop Rotation
+        Gui, Add, Button, +r1 +wrap vSaveStateToFile gSaveStateToFileCallback, Save to File
 
+        ;actual init
         Gui, Show
+        loadAllGUIFromState()
         refreshGUI()
         ;maxMana: 420
         ;manaRegen: 16

@@ -8,7 +8,7 @@
         iniMainSection := "mainSection"
         ;moved here
         latency := 300 ;ms
-        updateRate := 190 ;ms
+        updateRate := 1200 ;ms
         printInsteadOfSendHotkey := false
         stop := false
         muteDebug := false
@@ -17,6 +17,7 @@
         printSpells := true
         level := 10
         vocation := "vocation not set"
+        verboseDebug := false
         init(){
             
         }
@@ -62,7 +63,7 @@
                     ;debugPrint("Key, value: " key ", " value)
                 }
             }
-            this.printState()
+            ;this.printState()
         }
     }
 

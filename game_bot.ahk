@@ -17,10 +17,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include init.ahk
 #Include unit_tests.ahk
 
-loadConfig()
+;loadConfig()
 initGUI()
+
 ;currentConfig.saveStateFromGUIToIniFile()
 currentConfig.loadStateFromIniFile()
+;testLoadVocationRadioGroupFromState()
+;testLoadAllGUIFromState()
 
 ;must be last or else it would close the auto-execute section(?confirm?)
 #Include hotkeys.ahk

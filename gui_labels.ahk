@@ -2,13 +2,8 @@
 
     global DisplayText1 :=
     global DebugWindow :=
-    ;debugWindow := "DebugWindow"
     global VocationRadioGroup :=
-    VocationRadio1 :=
-    VocationRadio2 :=
-    VocationRadio3 :=
     global LevelEdit :=
-    ;global RefreshDataButton :=
     global LatencyEdit :=
     global CopyInputFromGameToScreenCheckbox :=
 
@@ -29,5 +24,6 @@
     global StartRotation :=
     global StopRotation :=
     global MuteDebugButton :=
+    global SaveStateToFile :=
 
 ;======================================================================================

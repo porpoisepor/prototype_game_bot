@@ -83,6 +83,22 @@
         ;doSingleRotation()
         doContinuousRotation()
     }
+    testLoadVocationRadioGroupFromState(){
+        loadVocationRadioGroupFromState()
+        Gui, Submit, NoHide
+    }
+    testLoadAllGUIFromStateWithSeparateFunctions(){
+        loadVocationRadioGroupFromState()
+        loadLevelEditFromState()
+        loadPrintInsteadOfPressFromState()
+        loadStopRotationFromState()
+        loadMuteDebugButtonFromState()
+        loadCopyInputFromGameToScreenCheckboxFromState()
+        loadLatencyEditFromState()
+    }
+    testLoadAllGUIFromState(){
+        loadAllGUIFromState()
+    }
 
 ;===============================================================================
 
